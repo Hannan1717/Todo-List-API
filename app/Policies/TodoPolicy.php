@@ -45,9 +45,13 @@ class TodoPolicy
      */
     public function delete(User $user, Todo $todo): bool
     {
-         return $user->id == $todo->user_id;
+        return $user->id == $todo->user_id;
     }
 
+    public function avatar(User $user, Todo $todo): bool
+    {
+        return $user->id == $todo->user_id;
+    }
     /**
      * Determine whether the user can restore the model.
      */

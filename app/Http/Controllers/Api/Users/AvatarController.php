@@ -15,6 +15,7 @@ class AvatarController extends Controller
     public function __invoke(Request $request)
     {
         // Validasi bahwa file avatar ada dan merupakan gambar
+
         $request->validate([
             'avatar' => 'required|image',
         ]);
